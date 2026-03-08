@@ -1,6 +1,6 @@
 # m-cucumber-selenium-test1
 
-Java 21, Selenium, Cucumber, Maven, and TestNG based project to practice web test automation with ChromeDriver.
+Java 21, Selenium, Cucumber, Maven, and TestNG based project to practice web test automation with Chrome.
 
 ## Tech Stack
 
@@ -9,7 +9,7 @@ Java 21, Selenium, Cucumber, Maven, and TestNG based project to practice web tes
 - Selenium WebDriver
 - Cucumber (BDD)
 - TestNG
-- WebDriverManager (automatic ChromeDriver management)
+- Selenium Manager (automatic ChromeDriver management)
 
 ## Project Structure
 
@@ -37,33 +37,39 @@ src
 
 - Java 21 installed
 - Maven 3.9+ installed
-- Google Chrome installed
+- Google Chrome 145.x installed
+- Local VS Code setup on Windows Home
 
 ## Run Tests
 
 Run the Cucumber + TestNG suite:
 
-```bash
+```powershell
 mvn clean test
 ```
 
 Run in headless mode:
 
-```bash
+```powershell
 mvn clean test -Dheadless=true
 ```
 
 Run against a custom URL instead of `https://example.com`:
 
-```bash
+```powershell
 mvn clean test -DbaseUrl=https://www.homedepot.com/
 ```
 
 Use a custom Chrome binary path (if Chrome is installed in a non-default location):
 
-```bash
-mvn clean test -DchromeBinary=/usr/bin/google-chrome
+```powershell
+mvn clean test "-DchromeBinary=C:\Program Files\Google\Chrome\Application\chrome.exe"
 ```
+
+## Windows Notes
+
+- Do not set `webdriver.chrome.driver` manually.
+- Selenium Manager downloads/uses a compatible ChromeDriver for your installed Chrome version.
 
 ## Output
 

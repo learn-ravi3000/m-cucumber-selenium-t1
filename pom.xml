@@ -16,11 +16,9 @@
         <selenium.version>4.29.0</selenium.version>
         <cucumber.version>7.20.1</cucumber.version>
         <testng.version>7.10.2</testng.version>
-        <webdrivermanager.version>5.9.2</webdrivermanager.version>
         <surefire.version>3.5.2</surefire.version>
-        <headless>true</headless>
+        <headless>false</headless>
         <baseUrl>https://www.homedepot.com/</baseUrl>
-        <chromeBinary>/usr/bin/google-chrome</chromeBinary>
     </properties>
 
     <dependencies>
@@ -28,12 +26,6 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>${selenium.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>${webdrivermanager.version}</version>
         </dependency>
 
         <dependency>
@@ -80,7 +72,6 @@
                     <systemPropertyVariables>
                         <headless>${headless}</headless>
                         <baseUrl>${baseUrl}</baseUrl>
-                        <chromeBinary>${chromeBinary}</chromeBinary>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>

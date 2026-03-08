@@ -1,11 +1,8 @@
 package my.examples.config;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
-import java.util.Locale;
 
 public final class DriverFactory {
 
@@ -19,21 +16,16 @@ public final class DriverFactory {
             return;
         }
 
-        WebDriverManager.chromedriver().setup();
-
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
         options.addArguments("--disable-notifications");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
 
         String chromeBinary = System.getProperty("chromeBinary", "").trim();
         if (!chromeBinary.isEmpty()) {
             options.setBinary(chromeBinary);
         }
 
-        boolean linuxHost = System.getProperty("os.name", "").toLowerCase(Locale.ROOT).contains("linux");
-        boolean headless = Boolean.parseBoolean(System.getProperty("headless", linuxHost ? "true" : "false"));
+        boolean headless = Boolean.parseBoolean(System.getProperty("headless", "false"));
 
         if (headless) {
             options.addArguments("--headless=new", "--window-size=1920,1080");
