@@ -17,7 +17,7 @@ Java 21, Selenium, Cucumber, Maven, and TestNG based project to practice web tes
 src
 └── test
 	├── java
-	│   └── com/example
+	│   └── my/examples
 	│       ├── config
 	│       │   └── DriverFactory.java
 	│       ├── hooks

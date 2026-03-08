@@ -1,6 +1,6 @@
-package com.example.hooks;
+package my.examples.hooks;
 
-import com.example.config.DriverFactory;
+import my.examples.config.DriverFactory;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 

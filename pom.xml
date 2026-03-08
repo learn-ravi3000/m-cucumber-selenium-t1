@@ -19,7 +19,7 @@
         <webdrivermanager.version>5.9.2</webdrivermanager.version>
         <surefire.version>3.5.2</surefire.version>
         <headless>true</headless>
-        <baseUrl>https://example.com</baseUrl>
+        <baseUrl>https://www.homedepot.com/</baseUrl>
         <chromeBinary>/usr/bin/google-chrome</chromeBinary>
     </properties>
 
